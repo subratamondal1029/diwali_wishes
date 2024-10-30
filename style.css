@@ -307,7 +307,7 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
-  section:nth-child(odd) {
+  #hero-section {
     flex-direction: column;
   }
 
@@ -380,11 +380,88 @@ section {
     width: 122.45px;
     right: 300px;
   }
+
+  #thanks-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #chakra3-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -212px;
+  }
+
+  #chakra3-container img.chakraImg {
+    position: static;
+    width: 362.13px;
+    height: 355px;
+  }
+
+  #thanksText-overlay {
+    width: 100%;
+    margin-top: 160px;
+  }
+
+  #text-container h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  #text-container p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  #thanksText-overlay #rocket-2 {
+    top: -77px;
+    left: -25px;
+    width: 99.54px;
+  }
+
+  #thanksText-overlay #rocket-1 {
+    bottom: -65px;
+    width: 120.11px;
+  }
+  #thanksText-overlay #soan-papadi {
+    bottom: -80px;
+    width: 140.11px;
+  }
+  #thanksText-overlay #gift {
+    bottom: -55px;
+    width: 120.41px;
+  }
 }
 
 @media screen and (max-width: 964px) {
   #hero-images img#jhumar {
     width: 58.23px;
+  }
+
+  #blasings {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  #blasings #chakra2-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -206px;
+    left: 0;
+  }
+
+  #chakra2-container img.chakraImg {
+    position: static;
+    width: 383px;
+  }
+
+  #mandap {
+    margin-top: 123px;
+    width: 60%;
   }
 }
 
@@ -412,6 +489,35 @@ section {
   #hero-images img#jhumar {
     top: 282px;
   }
+
+  #mandap {
+    width: 83%;
+  }
+
+  #thanksText-overlay {
+    background: transparent;
+  }
+
+  #thanksText-overlay #rocket-2 {
+    top: -77px;
+    left: -25px;
+    width: 99.54px;
+  }
+
+  #thanksText-overlay #soan-papadi {
+    bottom: -64px;
+    width: 140.11px;
+    right: 74px;
+  }
+  #thanksText-overlay #gift {
+    bottom: -39px;
+    right: 203px;
+    width: 120.41px;
+  }
+
+  #text-container {
+    padding-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -431,6 +537,38 @@ section {
   #hero-images img#deepak-2 {
     width: 122.45px;
     right: 300px;
+  }
+  #mandap {
+    width: 100%;
+  }
+
+  #text-container {
+    padding-top: 22px;
+  }
+
+  #text-container h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  #text-container p {
+    font-size: 16px;
+  }
+
+  #thanksText-overlay #rocket-2 {
+    width: 99.54px;
+  }
+
+  #thanksText-overlay #rocket-1 {
+    width: 115px;
+  }
+  #thanksText-overlay #soan-papadi {
+    width: 111px;
+    right: 56px;
+  }
+  #thanksText-overlay #gift {
+    width: 109px;
+    right: 153px;
   }
 }
 
@@ -465,6 +603,16 @@ section {
     width: 122.45px;
     right: 270px;
   }
+
+  #thanksText-overlay #rocket-2 {
+    width: 91px;
+    top: -59px;
+    left: -27px;
+  }
+
+  #text-container {
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 370px) {
@@ -481,10 +629,35 @@ section {
   #hero-images img#deepak-2 {
     right: 240px;
   }
+
+  #text-container p {
+    padding-top: 0;
+  }
+
+  #text-container {
+    padding-bottom: 10px;
+    padding-top: 15px;
+  }
 }
 @media screen and (max-width: 360px) {
   #hero-images img#jhumar {
     top: 288px;
     z-index: 0;
+  }
+
+  #thanksText-overlay #soan-papadi {
+    width: 107px;
+    right: 48px;
+    bottom: -29px;
+  }
+
+  #thanksText-overlay #rocket-1 {
+    width: 60px;
+    bottom: -14px;
+    right: 0;
+  }
+
+  #thanksText-overlay #gift {
+    display: none;
   }
 }
