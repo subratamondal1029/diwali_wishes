@@ -36,15 +36,14 @@ html {
 }
 
 body {
-  width: 100vw;
   min-height: 100vh;
 }
 
 section {
-  width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 #hero-section {
@@ -61,54 +60,45 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-}
-
-.chakra {
-  position: absolute;
-  width: 773.21px;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
 }
 
 .chakraImg {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 773.21px;
   animation: rotate 40s linear infinite;
 }
 
-.chakra img {
-  position: absolute;
+#chakra1-container {
+  position: relative;
+  width: calc(773.21 / 2) px;
+  width: 466px;
+  height: 100%;
+  z-index: 0;
+}
+
+#chakra1-container img {
   top: 0;
-  left: -472px;
-  width: 100%;
-  height: 100%;
-  animation: rotate 40s linear infinite;
+  left: -420px;
 }
 
-.hero-text {
+#hero-content {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 895px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 40px;
-  margin-top: 100px;
-  margin-left: 320px;
   z-index: 1;
   color: white;
   font-weight: 700;
 }
 
-.hero-text h1 {
+#hero-content h1 {
   position: relative;
   font-size: 96px;
+  margin-top: 70px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -116,23 +106,24 @@ section {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
 }
 
-.hero-text h1 img:first-child {
+#hero-content h1 img:first-child {
   width: 157.21px;
   height: 121px;
   margin-left: 24px;
 }
 
-.hero-text h1 img.flem {
+#hero-content h1 img.flem {
   width: 45px;
   position: absolute;
   right: 60px;
   top: 4px;
 }
 
-.hero-text p {
+#hero-content p {
   font-size: 36px;
   font-family: "Merriweather Sans", sans-serif;
   text-shadow: 3.46px 6.92px 17.29px rgba(0, 0, 0, 0.4);
+  width: 90%;
 }
 
 .hero-buttons {
@@ -153,45 +144,46 @@ section {
   box-shadow: 1px 5px 14px rgba(0, 0, 0, 0.25);
 }
 
-.hero-buttons button:last-child {
+.hero-buttons #getBlesBtn {
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 1px 5px 14px rgba(0, 0, 0, 0.25), inset 0 0 0 3px #fff;
   color: #fff;
 }
 
-.hero-images img {
+#hero-images img {
   position: absolute;
   right: 0;
 }
 
-.hero-images img#jhumar {
+#hero-images img#jhumar {
   top: 0;
   width: 106.51px;
 }
 
-.hero-images img#honey {
+#hero-images img#honey {
   top: 330px;
   width: 163.78px;
 }
 
-.hero-images img#laddu-1 {
+#hero-images img#laddu-1 {
   bottom: 0;
   width: 286px;
   z-index: 1;
 }
 
-.hero-images img#laddu-2 {
+#hero-images img#laddu-2 {
   z-index: 0;
   bottom: 0;
   width: 260px;
   right: 230px;
 }
-.hero-images img#deepak-2 {
+#hero-images img#deepak-2 {
   bottom: 0;
   width: 213px;
   right: 450px;
 }
 
+/* ---------------------------------------------------- */
 #blasings {
   display: flex;
   justify-content: center;
@@ -200,11 +192,8 @@ section {
   background-color: #f2ddb4;
 }
 
-#blasings div {
-  width: 100%;
-}
-
 #mandap {
+  width: 62%;
   height: 100%;
   background-image: url("./assets/images/mandapa.png");
   background-position: center;
@@ -221,11 +210,10 @@ section {
 }
 
 #blasings #chakra2-container {
-  width: 70%;
+  width: 440px;
 }
 
 #chakra2-container img.chakraImg {
-  width: 773.21px;
   right: -412px;
   top: 0;
 }
@@ -241,15 +229,18 @@ section {
     linear-gradient(0deg, #f9c159 0%, #ffac6c 33%, #fc7d7b 67%, #ed6589 100%);
 }
 
+#chakra3-container {
+  width: 440px;
+}
+
 #chakra3-container img.chakraImg {
-  width: 773.21px;
   left: -412px;
   top: 0;
 }
 
 #thanksText-overlay {
-  width: 70%;
   background: linear-gradient(90deg, #97978b28 0%, #ad0c6a6b 100%);
+  width: 80%;
   height: 100%;
   margin-left: auto;
   display: flex;
@@ -258,12 +249,12 @@ section {
 }
 
 #text-container {
-  background: linear-gradient(220deg, #481d6c 0%, #870551 100%);
   width: 90%;
+  background: linear-gradient(220deg, #481d6c 0%, #870551 100%);
   border-radius: 12px;
   padding-inline: 25px;
   color: #ffffff;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   padding-top: 35px;
   position: relative;
 }
@@ -301,7 +292,7 @@ section {
   width: 194px;
 }
 #thanksText-overlay #gift {
-  bottom: -73px;
+  bottom: -64px;
   right: 280px;
   width: 189.41px;
 }
@@ -312,5 +303,188 @@ section {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  #hero-content {
+    height: 100%;
+  }
+
+  #chakra1-container {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    top: -110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #chakra1-container img {
+    position: static;
+    width: 355.38px;
+  }
+
+  #hero-content {
+    padding-inline: 26px;
+    gap: 30px;
+  }
+
+  #hero-content h1 {
+    margin-top: 0;
+    font-size: 50px;
+  }
+
+  #hero-content h1 img:first-child {
+    width: 79.25px;
+    height: 100%;
+  }
+
+  #hero-content h1 img.flem {
+    width: 26px;
+    position: absolute;
+    right: 28px;
+    top: -1px;
+  }
+
+  #hero-content p {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  #hero-images img#jhumar {
+    width: 70.23px;
+    left: 16px;
+    top: 268px;
+  }
+
+  #hero-images img#honey {
+    width: 152.24px;
+    top: 184px;
+  }
+
+  #hero-images img#laddu-1 {
+    width: 182.74px;
+    right: 20px;
+  }
+
+  #hero-images img#laddu-2 {
+    width: 168.64px;
+    right: 155px;
+  }
+  #hero-images img#deepak-2 {
+    width: 122.45px;
+    right: 300px;
+  }
+}
+
+@media screen and (max-width: 964px) {
+  #hero-images img#jhumar {
+    width: 58.23px;
+  }
+}
+
+@media screen and (max-width: 696px) {
+  #hero-content h1 {
+    font-size: 42px;
+  }
+
+  #hero-content p {
+    font-size: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hero-buttons button {
+    padding: 5px 26px;
+    border-radius: 79px;
+    font-size: 18px;
+  }
+
+  #hero-images img#jhumar {
+    top: 282px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #hero-content {
+    gap: 15px;
+  }
+
+  #hero-images img#jhumar {
+    top: 277px;
+    z-index: 1;
+  }
+
+  #hero-images img#honey {
+    width: 132.24px;
+    top: 210px;
+  }
+  #hero-images img#deepak-2 {
+    width: 122.45px;
+    right: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #hero-content h1 {
+    font-size: 35px;
+  }
+  #hero-content p {
+    font-size: 17px;
+  }
+
+  #hero-images img#jhumar {
+    top: 265px;
+    z-index: 1;
+  }
+
+  #hero-images img#honey {
+    width: 152.24px;
+    top: 184px;
+  }
+
+  #hero-images img#laddu-1 {
+    width: 182.74px;
+    right: 0;
+  }
+
+  #hero-images img#laddu-2 {
+    width: 168.64px;
+    right: 130px;
+  }
+  #hero-images img#deepak-2 {
+    width: 122.45px;
+    right: 270px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #hero-content h1 {
+    font-size: 28px;
+  }
+  #hero-images img#laddu-1 {
+    width: 150.64px;
+  }
+  #hero-images img#laddu-2 {
+    right: 103px;
+  }
+
+  #hero-images img#deepak-2 {
+    right: 240px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #hero-images img#jhumar {
+    top: 288px;
+    z-index: 0;
   }
 }

@@ -9,12 +9,14 @@ getBlesBtn.addEventListener("click", () => {
 });
 
 let crackerNum = 1;
-fireWorkBtn.addEventListener("click", () => {
+fireWorkBtn.addEventListener("click", (e) => {
   if (crackerNum === 5) crackerNum = 1;
-  fireWorkContainer.style.opacity = 1;
+  fireWorkBtn.disabled = true;
   fireWorkContainer.innerHTML = `<img src="./assets/gifs/Cracker ${crackerNum}.gif" alt="Cracker ${crackerNum}" />`;
+
   setTimeout(() => {
-    fireWorkContainer.style.opacity = 0;
-  }, 2500);
+    fireWorkContainer.innerHTML = "";
+    fireWorkBtn.disabled = false;
+  }, 2300);
   crackerNum++;
 });
