@@ -1,30 +1,36 @@
-const fireWorkBtn = document.getElementById("fireWorkBtn");
-const getBlesBtn = document.getElementById("getBlesBtn");
-const blasingsSection = document.getElementById("blasings");
-const fireWorkContainer = document.getElementById("firework-container");
-const blasingsSongCon = document.getElementById("blasingsSong");
+window.onload = () => {
+  const fireWorkBtn = document.getElementById("fireWorkBtn");
+  const getBlesBtn = document.getElementById("getBlesBtn");
+  const blasingsSection = document.getElementById("blasings");
+  const fireWorkContainer = document.getElementById("firework-container");
+  const blasingsSongCon = document.getElementById("blasingsSong");
+  const customNameCon = document.getElementById("custom-name");
+  let nameQuery = location.search.split("=")[1];
 
-getBlesBtn.addEventListener("click", () => {
-  const rect = blasingsSection.getBoundingClientRect();
-  window.scrollTo(0, rect.y);
-});
+  nameQuery
+    ? (customNameCon.textContent = `s ${nameQuery}`)
+    : (customNameCon.textContent = " You");
 
-let crackerNum = 1;
-fireWorkBtn.addEventListener("click", (e) => {
-  if (crackerNum === 5) crackerNum = 1;
-  fireWorkBtn.disabled = true;
-  fireWorkContainer.innerHTML = `<img src="./assets/gifs/Cracker ${crackerNum}.gif" alt="Cracker ${crackerNum}" />
+  getBlesBtn.addEventListener("click", () => {
+    const rect = blasingsSection.getBoundingClientRect();
+    window.scrollTo(0, rect.y);
+  });
+
+  let crackerNum = 1;
+  fireWorkBtn.addEventListener("click", (e) => {
+    if (crackerNum === 5) crackerNum = 1;
+    fireWorkBtn.disabled = true;
+    fireWorkContainer.innerHTML = `<img src="./assets/gifs/Cracker ${crackerNum}.gif" alt="Cracker ${crackerNum}" />
                                   <audio src="./assets/sound/Cracker ${crackerNum}.wav" autoplay loop></audio>
   `;
 
-  setTimeout(() => {
-    fireWorkContainer.innerHTML = "";
-    fireWorkBtn.disabled = false;
-  }, 2300);
-  crackerNum++;
-});
+    setTimeout(() => {
+      fireWorkContainer.innerHTML = "";
+      fireWorkBtn.disabled = false;
+    }, 2300);
+    crackerNum++;
+  });
 
-window.onload = () => {
   const playAudio = (e) => {
     const scrolled = e?.target.scrollingElement.scrollTop || 0;
     const blasingsRect = blasingsSection.getBoundingClientRect();
@@ -55,7 +61,6 @@ window.onload = () => {
 
   document.body.click();
   playAudio();
-  console.log("dfgjh");
 
   document.addEventListener("scroll", playAudio);
 };
