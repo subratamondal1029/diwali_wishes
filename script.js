@@ -54,7 +54,7 @@ window.onload = () => {
         return;
       blasingsSongCon.src = "./assets/sound/happyDiwali.mp3";
       blasingsSongCon.play();
-      blasingsSongCon.volume = 0.5;
+      blasingsSongCon.volume = 0.6;
     }
   };
 
