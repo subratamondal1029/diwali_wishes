@@ -45,7 +45,6 @@ window.onload = () => {
         return;
       blasingsSongCon.src = "./assets/sound/blasings.mp3";
       blasingsSection.volume = 1;
-      blasingsSongCon.currentTime = 10;
       blasingsSongCon.play();
     } else {
       if (
